@@ -1,0 +1,2 @@
+# inventory-crud
+Tech Stack: HTML5, CSS3, JAVASCRIPT, BOOTSTRAP5, REACT Router DOM v6.3, REACT DOM v18, AXIOS
