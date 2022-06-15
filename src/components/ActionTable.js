@@ -23,7 +23,10 @@ export default class ActionTable extends Component {
                     transform: "translateY(-50%)",
                   }}
                 >
-                  <NavLink className="btn btn-primary" to={`/${urlPath}/create`}>
+                  <NavLink
+                    className="btn btn-primary"
+                    to={`/${urlPath}/create`}
+                  >
                     Add New (+)
                   </NavLink>
                 </div>
@@ -33,9 +36,7 @@ export default class ActionTable extends Component {
           <div className="row">
             <div className="col-sm-12 m-auto">
               <div className="table-responsive">
-                <table className="table table-hover">
-                  <ActionTableRow data={data} key={data.id} urlPath={urlPath} />
-                </table>
+                <ActionTableRow data={data} key={data.id} urlPath={urlPath} />
               </div>
             </div>
           </div>

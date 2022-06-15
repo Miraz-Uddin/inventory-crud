@@ -35,8 +35,7 @@ const AddForm = (props) => {
       axios
         .post(`http://localhost:4001/${props.urlPath}`, allValues)
         .then((data) => {
-          navigate(`/${props.urlPath}`, { replace: true })
-          // window.location.reload()
+          navigate(`/${props.urlPath}`, { state: data });
         })
         .catch((err) => console.log(err));
     }
