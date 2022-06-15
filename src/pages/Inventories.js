@@ -1,22 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 import ActionTable from "../components/ActionTable";
+import { useState } from "react";
 
-export default class Inventories extends Component {
-  state = {
-    items: [],
-    urlPath: "",
-  };
-  componentDidMount() {
-    this.setState({
-      items: this.props.items,
-      urlPath: this.props.urlPath,
-    });
+const Inventories = (props) => {
+  const [allValues, setAllValues] = useState({
+    items: props.items ?? [],
+    url: "",
+  });
+
+  React.useEffect(() => {
+    setAllValues({ items: props.items, url: props.urlPath });
+  },[]);
+
+  const { items, url } = allValues;
+
+  if (items.length !== 0) {
+    const data = items;
+    const urlPath = url;
+    return <>{<ActionTable data={data} urlPath={urlPath} />}</>;
   }
-  render() {
-    if (this.state.items.length !== 0) {
-      const data = this.state.items;
-      const urlPath = this.state.urlPath;
-      return <>{<ActionTable data={data} urlPath={urlPath} />}</>;
-    }
-  }
-}
+};
+
+export default Inventories;

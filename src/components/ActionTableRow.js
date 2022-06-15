@@ -28,7 +28,7 @@ export default class ActionTableRow extends Component {
             </tr>
           </thead>
           <tbody>
-            {obj.map((item, index) => (
+            {obj.reverse().map((item, index) => (
               <tr key={index}>
                 {colHeads.map((colum, index) => {
                   return (

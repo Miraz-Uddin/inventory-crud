@@ -32,7 +32,7 @@ export default class App extends Component {
           <Route path="/" element={<Home />} />
           <Route
             path="/inventories/create"
-            element={<AddForm items={items} />}
+            element={<AddForm urlPath={"inventories"}/>}
           />
           <Route
             path="/inventories/:id"
