@@ -38,7 +38,7 @@ export default class Navigator extends Component {
                     aria-current="page"
                     to="/inventories"
                   >
-                   Inventories
+                    Inventories
                   </NavLink>
                 </li>
                 <li className="nav-item">
